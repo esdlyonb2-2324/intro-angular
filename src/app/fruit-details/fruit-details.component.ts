@@ -17,7 +17,7 @@ export class FruitDetailsComponent {
   fruitService : FruitsService = inject(FruitsService)
   route : ActivatedRoute = inject(ActivatedRoute)
   constructor() {
-    let id = this.route.snapshot.params['id']
+    let id = Number(this.route.snapshot.params['id'])
     this.fruit = this.fruitService.getFruitById(id)
 
   }

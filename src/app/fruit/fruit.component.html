@@ -1,5 +1,5 @@
 <div>
   <p>{{leFruit.name}}</p>
   <p>{{leFruit.couleur}}</p>
-  <button routerLink="['/fruit',fruit.id]" class="btn btn-success">voir la {{leFruit.name}}</button>
+  <button [routerLink]="['/fruit',leFruit.id]" class="btn btn-success">voir la {{leFruit.name}}</button>
 </div>

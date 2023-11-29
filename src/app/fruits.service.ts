@@ -28,6 +28,6 @@ export class FruitsService {
 
   getFruitById(id:number){
 
-    return this.tableauFruits.find((fruit:Fruit)=>fruit.id == id)
+    return this.tableauFruits.find((fruit:Fruit)=>fruit.id == id)!
   }
 }
