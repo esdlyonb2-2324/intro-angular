@@ -10,6 +10,6 @@ import {Fruit} from "../fruit";
   styleUrl: './fruit.component.css'
 })
 export class FruitComponent {
-  @Input() leFruit : Fruit
+  @Input() leFruit! : Fruit
 
 }
