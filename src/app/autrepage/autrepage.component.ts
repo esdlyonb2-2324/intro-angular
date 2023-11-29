@@ -17,4 +17,7 @@ export class AutrepageComponent {
 
   fruits: Fruit[] = this.fruitsService.getFruits()
 
+  constructor() {
+    console.log(this.fruitsService.getFruitById(2))
+  }
 }

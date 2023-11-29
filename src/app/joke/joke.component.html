@@ -1,2 +1,6 @@
-<p class="bleu"> {{joke.value}}</p>
+<p
+[ngClass]="joke.value.length > aShortJoke.length?'rouge':'bleu'"
+> {{joke.value | maurice}}</p>
 <a href="{{joke.url}}">{{joke.url}}</a>
+<p>{{joke.value.length}}</p>
+<p>{{aShortJoke.length}}</p>

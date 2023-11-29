@@ -10,10 +10,12 @@ export class FruitsService {
 
   tableauFruits : Fruit[] = [
     {
+      id:1,
       name:"banane",
       couleur : "jaune"
     },
     {
+      id:2,
       name:"pomme",
       couleur:"rouge"
     }
@@ -24,4 +26,8 @@ export class FruitsService {
     return this.tableauFruits
   }
 
+  getFruitById(id:number){
+
+    return this.tableauFruits.find((fruit:Fruit)=>fruit.id == id)
+  }
 }
