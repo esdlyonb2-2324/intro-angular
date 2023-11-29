@@ -1,2 +1,16 @@
 <p>home works!</p>
 <p>coucou</p><p>coucou</p><p>coucou</p><p>coucou</p><p>coucou</p>
+
+<h3>{{message}}</h3>
+
+<div *ngFor="let mot of tableau" >
+  <p><strong>{{mot}}</strong></p>
+</div>
+<input type="text" [value]="mot" *ngFor="let mot of tableau" >
+<button (click)="discoucou()" class="btn btn-primary">test</button>
+<hr>
+<h3>{{contenuInput}}</h3>
+<input [(ngModel)]="contenuInput" type="text" class="form-control">
+
+<hr>
+<hr>
