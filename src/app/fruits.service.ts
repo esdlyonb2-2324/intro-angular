@@ -30,4 +30,11 @@ export class FruitsService {
 
     return this.tableauFruits.find((fruit:Fruit)=>fruit.id == id)!
   }
+
+  addFruit(name:string,couleur:string)
+  {
+    let id = Math.max(...this.tableauFruits.map((unFruit)=>unFruit.id))+1
+    this.tableauFruits.push({id:id, name:name,couleur:couleur})
+  }
+
 }

@@ -2,5 +2,15 @@
 
 <app-fruit *ngFor="let unFruit of fruits" [leFruit]="unFruit"></app-fruit>
 
+<form
+[formGroup]="fruitForm"
+(submit)="sendFruit()"
+>
+  <input type="text" formControlName="name" >
+  <input type="text" formControlName="couleur" >
+
+  <button type="submit" class="btn btn-success">add fruit</button>
+
+</form>
 
 <h3>salut je suis une autre page</h3>
