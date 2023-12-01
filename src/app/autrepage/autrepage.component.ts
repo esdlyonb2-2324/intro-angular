@@ -31,6 +31,22 @@ export class AutrepageComponent {
 
   fruits: Fruit[] = this.fruitsService.getFruits()
 
+  filteredFruits : Fruit[] = []
+
+
+  fruitFilter(occurence:string)
+  {
+    if(!occurence)
+    {
+      this.filteredFruits = this.fruits
+    }else{
+       this.filteredFruits = this.fruits.filter((unFruit:Fruit)=>{
+          unFruit?.couleur.toLowerCase().includes(occurence.toLowerCase())
+        })
+
+    }
+  }
+
   constructor() {
     console.log(this.fruitsService.getFruitById(2))
     localStorage.setItem('COUCOU', "COUCOU COUCOU")

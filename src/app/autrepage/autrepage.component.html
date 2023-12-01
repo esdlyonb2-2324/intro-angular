@@ -1,6 +1,8 @@
 <p>autrepage works!</p>
+<input type="text" #leFiltre placeholder="chercher">
+<button (click)="fruitFilter(leFiltre.value)" class="btn btn-primary">cherche !</button>
 
-<app-fruit *ngFor="let unFruit of fruits" [leFruit]="unFruit"></app-fruit>
+<app-fruit *ngFor="let unFruit of filteredFruits" [leFruit]="unFruit"></app-fruit>
 
 <form
 [formGroup]="fruitForm"
